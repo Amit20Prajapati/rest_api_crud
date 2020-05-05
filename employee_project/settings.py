@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'employee_register',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
