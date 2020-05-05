@@ -15,7 +15,7 @@ def employee_form(request,id=0):
             form = EmployeeForm()
         else:
             employee = Employee.objects.get(pk=id)
-            form = EmployeeForm(intance=employee)
+            form = EmployeeForm(instance=employee)
         return render(request, "employee_register/employee_form.html", {'form': form})
     else:
         form = EmployeeForm(request.POST)
