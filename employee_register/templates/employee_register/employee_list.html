@@ -9,6 +9,11 @@
                 <td>Mobile</td>
                 <td>Position</td>
                 <td>Action</td>
+                <td>
+                    <a href="{% url 'employee_insert' %}" class="btn btn-outline-success">
+                        <i class="fas fa-plus"></i>Add New
+                    </a>
+                </td>
             </tr>
         </thead>
     <tbody>
@@ -18,7 +23,7 @@
             <td>{{ employee.mobile }}</td>
             <td>{{ employee.position }}</td>
             <td>
-                <a href="{% url 'employee_update' employee.id %}" class="btn text-secondary px-0">
+                <a href="#" class="btn text-secondary px-0">
                     <i class="far fa-edit fa-lg"></i>
                 </a>
             </td>
