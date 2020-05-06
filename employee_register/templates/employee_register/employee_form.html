@@ -2,10 +2,27 @@
 
 {% block content %}
     <form action="" method="post" autocomplete="off">
-        <div>
-        {% csrf_token %}
-        {{ form }}
+        <div class="form-group">
+            {% csrf_token %}
+            <label>Full Name</label>
+            <div>{{form.fullName}}</div>
+            <label>Mobile</label>
+            <div>{{form.mobile}}</div>
+            <label>Employee Code</label>
+            <div>{{form.emp_code}}</div>
+            <label>Position</label>
+            <div>{{form.position}}</div>
         </div>
-     <button type="submit">Submit</button>
+        <div class="row">
+            <div class="col-md-8">
+                <button class="btn btn-success btn-block btn-lg"type="submit">Submit</button>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'employee_list' %}" class="btn btn-secondary btn-block btn-lg">
+                    <i class="fas fa-stream"></i>
+                    Back to list
+                </a>
+            </div>
+        </div>
     </form>
 {% endblock content %}
